@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row my-5">
+        <div class="container-fluid">
+            <h1 class="fw-bold text-start text-body-emphasis">The Million Dollar Bond Robery</h1>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <ol class="breadcrumb breadcrumb-chevron p-3 bg-primary-subtle rounded-3 border">
+            <li class="breadcrumb-item">
+              <a class="link-body-emphasis fw-semibold text-decoration-none" href="#">Level 1</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Level 2
+            </li>
+          </ol>
+    </div>
+
+    <div class="row">
+       <div class="container-fluid rounded-3 shadow-lg">
+        <p class="p-2 my-3 text-start fs-5 fw-normal lh-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nulla ut purus ultricies eleifend at nec elit. Sed tincidunt non urna eget vehicula. Proin lacinia quam fringilla enim maximus, imperdiet suscipit risus tincidunt. Donec sollicitudin leo libero. Maecenas eu lorem sapien. Sed interdum non dui in dapibus. Nunc vel tortor posuere, tempor turpis ut, scelerisque augue.</p>
+       </div> 
+    </div>
+
+    <div class="row my-5 border rounded-3 align-items-center">
+        <div class="col-lg-8 p-2 m-3">
+            <div id="editor" style="height: 350px; border: 2px; border-radius: 5px; padding: 5px;">import pandas as pd</div>
+        </br>
+            <button class="btn btn-primary px-4 me-md-2 fw-bold text-wrap" onclick="runCode()">Run Code</button>
+        </div>
+        <div class="col-lg-2">
+            <div class="output text-start" id="output">
+                <samp id="code-output">Your output will appear here...</samp>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js" integrity="sha512-yjhIcftV1KZyd3rLPujicRV6NpFEuCqQaOBBdrey6vFdU1zVkJYgJf9a+15YrOuzzSXYNV2GU4xdQ8Xy9Zj/fA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/cloud9_day");
+    editor.session.setMode("ace/mode/python");
+    editor.setOptions({
+        autoScrollEditorIntoView: true,
+        copyWithEmptySelection: true,
+    });
+</script>
+{% endblock %}
