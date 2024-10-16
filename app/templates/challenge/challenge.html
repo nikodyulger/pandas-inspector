@@ -27,5 +27,29 @@
        </div> 
     </div>
 
+    <div class="row my-5 border rounded-3 align-items-center">
+        <div class="col-lg-8 p-2 m-3">
+            <div id="editor" style="height: 350px; border: 2px; border-radius: 5px; padding: 5px;">import pandas as pd</div>
+        </br>
+            <button class="btn btn-primary px-4 me-md-2 fw-bold text-wrap" onclick="runCode()">Run Code</button>
+        </div>
+        <div class="col-lg-2">
+            <div class="output text-start" id="output">
+                <samp id="code-output">Your output will appear here...</samp>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js" integrity="sha512-yjhIcftV1KZyd3rLPujicRV6NpFEuCqQaOBBdrey6vFdU1zVkJYgJf9a+15YrOuzzSXYNV2GU4xdQ8Xy9Zj/fA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/cloud9_day");
+    editor.session.setMode("ace/mode/python");
+    editor.setOptions({
+        autoScrollEditorIntoView: true,
+        copyWithEmptySelection: true,
+    });
+</script>
 {% endblock %}
