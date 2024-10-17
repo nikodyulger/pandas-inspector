@@ -1,0 +1,4 @@
+{
+    "packages": ["pandas", "matplotlib"],
+    "interpreter": "https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.mjs"
+}
